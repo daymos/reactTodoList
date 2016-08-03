@@ -13,9 +13,7 @@ class App extends Component{
 
   update(value){
    console.log('you clicked the button', value) 
-   this.state.toDos.push(<div >{value}</div>)
-   this.forceUpdate()
-   console.log(this.state.toDos)
+   this.setState({toDos:this.state.toDos.concat(<div >{value}</div>)})
   }
 
   recordChange(event){
